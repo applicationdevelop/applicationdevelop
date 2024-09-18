@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .Father {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .Son {
+            
+            background-color:brown;
+            padding: 30px;
+            border: 5px solid blue;
+            border-radius: 10px;
+            animation:rahul 5s linear 1s infinite;
+        }
+        @keyframes rahul {
+            from{
+               width: 350px;
+               background-color: rgb(197, 17, 146);
+            }
+            to{
+                width: 350px;
+                background-color: blueviolet;
+            }
+        }
+
+        label {
+            color: white;
+        }
+
+        input {
+            background-color: antiquewhite;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 20px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color:aqua;
+        }
+        .btn{
+            background-color: greenyellow;
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            margin:5px 40px;
+            font-weight:bold;
+        }
+        .btn:hover{
+            background-color:blue;
+            width: 220px;
+        }
+        @media(max-width:425px){
+            .son{
+                width:250px;
+
+            }
+        }
+        @media(max-width:320px){
+            .son{
+                width:100px;
+
+            }
+            h1{
+                width:200px;
+            }
+            input{
+                width:250px;
+            }
+            .btn{
+                width:130px;
+            }
+            .btn:hover{
+                width:140px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="Father">
+        <div class="Son">
+            <h1>Calculte %</h1>
+            <label for="">Enter First Number</label> <br>
+            <input type="text" placeholder="Number" id="subject"> <br>
+            <label for="">Enter First Number</label> <br>
+            <input type="text" placeholder="Number" id="marks"> <br>
+            <input type="submit" value="calculate" onclick="persent()" class="btn"> <br>
+            <h2 id="res">Result</h2>
+        </div>
+    </div>
+    <script>
+        function persent() {
+
+            var a = parseInt(document.getElementById('subject').value);
+            var b = parseInt(document.getElementById('marks').value);
+
+            var c = a / b;
+            document.getElementById("res").innerHTML = "Result = " + c+"%";
+
+        }
+    </script>
+</body>
+
+</html>
